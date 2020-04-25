@@ -1,5 +1,3 @@
-console.log ('client side js script is loaded.')
-
 // fetch('http://localhost:4000/weather?address=hyderabad').then((response)=> {
 //     response.json().then((data)=>{
 //         console.log(data)
@@ -17,7 +15,7 @@ weatherForm.addEventListener('submit', (e)=>{
     e.preventDefault()
     messageOne.textContent='Loading..'
     messageTwo.textContent=''
-    
+
     const location = search.value
     const url = 'http://localhost:4000/weather?address=' + location
     fetch(url).then((response)=> {
