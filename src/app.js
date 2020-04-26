@@ -7,7 +7,7 @@ const forecast = require('./utils/forecast')
 // console.log (__dirname)
 // console.log (path.join(__dirname, '../public'))
 const app = express()
-
+const port = process.env.port || 4000
 
 
 const publicDirPath = path.join(__dirname, '../public')
@@ -30,13 +30,13 @@ app.get ('/help', (req,resp)=>{
     resp.render ('help', {
         title: 'Help page',
         name: 'Santosh Joshi',
-        helpText: 'This is a help page!'
+        helpText: 'This website can be used to get the temperature and weather forecast'
     })
 
 })
 app.get ('/about', (req,resp)=>{
      resp.render ('about', {
-         title: 'someInfo',
+         title: 'About Info',
          name: 'Santosh Joshi'
      }) 
 })
@@ -100,7 +100,7 @@ app.get ('*', (req,res)=> {
         errorMsg: 'Page couldnt be found'
     })
 })
-const port = 4000
+
 app.listen(port, ()=>{
     console.log ('Server is up on port: ' + port)
 })

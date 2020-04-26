@@ -28,7 +28,7 @@ weatherForm.addEventListener('submit', (e)=>{
                 messageTwo.textContent = 'Error: ' + data.Error
             } else {
                 messageOne.textContent = 'Temperature: ' + data.temperature 
-                    + ' Forecast :' + data.forecast + ' Address: ' + data.address
+                    + ',  Forecast :' + data.forecast + ',  Address: ' + data.address
                 console.log(data)
             }
            // console.log(data)
