@@ -7,7 +7,7 @@ const forecast = require('./utils/forecast')
 // console.log (__dirname)
 // console.log (path.join(__dirname, '../public'))
 const app = express()
-const port = process.env.port || 4000
+const port = process.env.PORT || 4000
 
 
 const publicDirPath = path.join(__dirname, '../public')
